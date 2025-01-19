@@ -1,0 +1,14 @@
+{
+    "menu.home": "Home",
+    "menu.about": "About",
+    "menu.resume": "Resume",
+    "greeting": "Hi There!",
+    "iconGreeting": "👋🏻",
+    "subject": "I'm",
+    "name": "Hugo Carvajalino",
+    "roles": [
+        "Systems Engineer",
+        "Full-Stack Developer",
+        "MERN Stack Developer"
+    ]
+}

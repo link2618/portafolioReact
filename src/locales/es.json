@@ -1,0 +1,14 @@
+{
+    "menu.home": "Inicio",
+    "menu.about": "Sobre mi",
+    "menu.resume": "Hoja de vida",
+    "greeting": "¡Hola!",
+    "iconGreeting": "👋🏻",
+    "subject": "Yo soy",
+    "name": "Hugo Carvajalino",
+    "roles": [
+        "Ingeniero de Sistemas",
+        "Desarrollador Full-Stack",
+        "Desarrollador MERN Stack"
+    ]
+}

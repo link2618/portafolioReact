@@ -1,14 +1,23 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import { Link } from "react-router";
 import { CgFileDocument } from "react-icons/cg";
 import { AiOutlineHome, AiOutlineUser } from "react-icons/ai";
 
 import logo from "../Assets/logo.png";
+import { LANGUAGES } from '../constants/index';
 
 function NavBar() {
     const [expand, updateExpanded] = useState(false);
     const [navColour, updateNavbar] = useState(false);
+
+    const { i18n, t } = useTranslation();
+
+    const onChangeLang = (e: React.ChangeEvent<HTMLSelectElement>) => {
+        const lang_code = e.target.value;
+        i18n.changeLanguage(lang_code);
+    };
 
     function scrollHandler() {
         if (window.scrollY >= 20) {
@@ -53,7 +62,7 @@ function NavBar() {
                                 <AiOutlineHome
                                     style={{ marginBottom: "2px" }}
                                 />{" "}
-                                Home
+                                {t("menu.home")}
                             </Nav.Link>
                         </Nav.Item>
 
@@ -66,7 +75,7 @@ function NavBar() {
                                 <AiOutlineUser
                                     style={{ marginBottom: "2px" }}
                                 />{" "}
-                                About
+                                {t("menu.about")}
                             </Nav.Link>
                         </Nav.Item>
 
@@ -79,8 +88,21 @@ function NavBar() {
                                 <CgFileDocument
                                     style={{ marginBottom: "2px" }}
                                 />{" "}
-                                Resume
+                                {t("menu.resume")}
                             </Nav.Link>
+                        </Nav.Item>
+
+                        <Nav.Item>
+                            <select
+                                defaultValue={i18n.language}
+                                onChange={onChangeLang}
+                            >
+                                {LANGUAGES.map(({ code, label }) => (
+                                    <option key={code} value={code}>
+                                        {label}
+                                    </option>
+                                ))}
+                            </select>
                         </Nav.Item>
                     </Nav>
                 </Navbar.Collapse>
