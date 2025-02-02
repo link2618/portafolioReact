@@ -10,5 +10,27 @@
         "Systems Engineer",
         "Full-Stack Developer",
         "MERN Stack Developer"
-    ]
+    ],
+    "home2.title1": "🌟 Let me",
+    "home2.titleHighlighted": "introduce",
+    "home2.title2": "myself",
+    "home2.paragraph1": "I fell in love with programming, and I think I've learned something… 🤷‍♂️",
+    "home2.paragraph2": "I'm a",
+    "home2.paragraph3": "Full Stack",
+    "home2.paragraph4": "developer with experience in",
+    "home2.paragraph5": "Backend",
+    "home2.paragraph6": "using",
+    "home2.paragraph7": "Node.js, NestJS, Express.js, Python, Serverless, and Docker.",
+    "home2.paragraph8": "For databases, I work with",
+    "home2.paragraph9": "PostgreSQL and MongoDB.",
+    "home2.paragraph10": "On the",
+    "home2.paragraph11": "Frontend,",
+    "home2.paragraph12": "I build modern and dynamic interfaces using",
+    "home2.paragraph13": "React, Next.js, Css, Sass, TailwindCss.",
+    "home2.paragraph14": "I'm always exploring new technologies and developing innovative products. 🚀",
+    "home2.findMe": "find me on",
+    "home2.desc1": "Feel free to",
+    "home2.desc2": "connect",
+    "home2.desc3": "with me",
+    "footer.credits": "Designed by Soumyajit Behera and Developed by Hugo Carvajalino"
 }

@@ -1,59 +1,72 @@
 import { Container, Row, Col } from "react-bootstrap";
-import myImg from "../../Assets/avatar.svg";
+import { useTranslation } from "react-i18next";
+
 import Tilt from "react-parallax-tilt";
 import {
     AiFillGithub,
     AiOutlineTwitter,
-    AiFillInstagram,
+    // AiFillInstagram,
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 
+import myImg from "../../Assets/avatar.svg";
+
 function Home2() {
+    const { t } = useTranslation();
+
     return (
         <Container fluid className="home-about-section" id="about">
             <Container>
                 <Row>
                     <Col md={8} className="home-about-description">
-                        <h1 style={{ fontSize: "2.6em" }}>
-                            LET ME <span className="purple"> INTRODUCE </span>{" "}
-                            MYSELF
+                        <h1 style={{ fontSize: "2.6em", textTransform: "uppercase" }}>
+                            {t("home2.title1")} <span className="purple"> {t("home2.titleHighlighted")} </span>{" "}
+                            {t("home2.title2")}
                         </h1>
                         <p className="home-about-body">
-                            I fell in love with programming and I have at least
-                            learnt something, I think… 🤷‍♂️
+                            {t("home2.paragraph1")}
                             <br />
-                            <br />I am fluent in classics like
+                            <br />{t("home2.paragraph2")}
                             <i>
                                 <b className="purple">
                                     {" "}
-                                    C++, Javascript and Go.{" "}
+                                    {t("home2.paragraph3")}{" "}
+                                </b>
+                            </i>
+                            {t("home2.paragraph4")}
+                            <i>
+                                <b className="purple">
+                                    {" "}
+                                    {t("home2.paragraph5")}{" "}
+                                </b>
+                            </i>
+                            {t("home2.paragraph6")}
+                            <i>
+                                <b className="purple">
+                                    {" "}
+                                    {t("home2.paragraph7")}{" "}
+                                </b>
+                            </i>
+                            {t("home2.paragraph8")}
+                            <i>
+                                <b className="purple">
+                                    {" "}
+                                    {t("home2.paragraph9")}{" "}
                                 </b>
                             </i>
                             <br />
                             <br />
-                            My field of Interest's are building new &nbsp;
+                            {t("home2.paragraph10")} &nbsp;
                             <i>
                                 <b className="purple">
-                                    Web Technologies and Products{" "}
+                                {t("home2.paragraph11")}{" "}
                                 </b>{" "}
-                                and also in areas related to{" "}
-                                <b className="purple">Blockchain.</b>
+                                {t("home2.paragraph12")}{" "}
+                                <b className="purple">{t("home2.paragraph13")}</b>
                             </i>
                             <br />
                             <br />
-                            Whenever possible, I also apply my passion for
-                            developing products with{" "}
-                            <b className="purple">Node.js</b> and
-                            <i>
-                                <b className="purple">
-                                    {" "}
-                                    Modern Javascript Library and Frameworks
-                                </b>
-                            </i>
-                            &nbsp; like
-                            <i>
-                                <b className="purple"> React.js and Next.js</b>
-                            </i>
+                            {t("home2.paragraph14")}
                         </p>
                     </Col>
                     <Col md={4} className="myAvtar">
@@ -68,15 +81,15 @@ function Home2() {
                 </Row>
                 <Row>
                     <Col md={12} className="home-about-social">
-                        <h1>FIND ME ON</h1>
+                        <h1 style={{ textTransform: "uppercase" }}>{t("home2.findMe")}</h1>
                         <p>
-                            Feel free to{" "}
-                            <span className="purple">connect </span>with me
+                            {t("home2.desc1")}{" "}
+                            <span className="purple">{t("home2.desc2")} </span>{t("home2.desc3")}
                         </p>
                         <ul className="home-about-social-links">
                             <li className="social-icons">
                                 <a
-                                    href="https://github.com/soumyajit4419"
+                                    href="https://github.com/link2618"
                                     target="_blank"
                                     rel="noreferrer"
                                     className="icon-colour  home-social-icons"
@@ -86,7 +99,7 @@ function Home2() {
                             </li>
                             <li className="social-icons">
                                 <a
-                                    href="https://twitter.com/Soumyajit4419"
+                                    href="https://x.com/HugoCarvajalino"
                                     target="_blank"
                                     rel="noreferrer"
                                     className="icon-colour  home-social-icons"
@@ -96,7 +109,7 @@ function Home2() {
                             </li>
                             <li className="social-icons">
                                 <a
-                                    href="https://www.linkedin.com/in/soumyajit4419/"
+                                    href="https://www.linkedin.com/in/hugo-carvajalino-solano-4420b1172/"
                                     target="_blank"
                                     rel="noreferrer"
                                     className="icon-colour  home-social-icons"
@@ -104,16 +117,16 @@ function Home2() {
                                     <FaLinkedinIn />
                                 </a>
                             </li>
-                            <li className="social-icons">
+                            {/* <li className="social-icons">
                                 <a
-                                    href="https://www.instagram.com/soumyajit4419"
+                                    href=""
                                     target="_blank"
                                     rel="noreferrer"
                                     className="icon-colour home-social-icons"
                                 >
                                     <AiFillInstagram />
                                 </a>
-                            </li>
+                            </li> */}
                         </ul>
                     </Col>
                 </Row>
