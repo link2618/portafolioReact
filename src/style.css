@@ -155,8 +155,17 @@ button:focus {
 }
 
 .logo {
-  height: 1.4em !important;
-  width: 2.5em !important;
+  height: 2.5em;
+  width: 6em;
+  color: #C770F0;
+  filter: brightness(0) saturate(100%) invert(58%) sepia(56%) saturate(454%) 
+          hue-rotate(218deg) brightness(94%) contrast(89%); /* Código HEX #C770F0 convertido a filtro */
+}
+
+.logo:hover {
+  color: #9D4EDD;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
 }
 
 .navbar-nav .nav-link {
@@ -204,6 +213,133 @@ button:focus {
 .navbar-nav .nav-item a:hover::after {
   width: 100%;
 }
+
+/* Estilos para el selector de idiomas */
+.navbar-nav .nav-item .lang-selector {
+  display: flex !important;
+  align-items: center;
+  padding: 0.8rem 1rem !important;
+  cursor: pointer;
+  position: relative;
+}
+
+.lang-dropdown {
+  background: transparent;
+  border: none;
+  color: inherit !important;
+  margin-left: 5px;
+  cursor: pointer;
+  font: inherit !important;
+  font-weight: 400 !important;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding-right: 20px !important;
+}
+
+.lang-dropdown option {
+  background: #1b1a2e !important; /* Color de fondo del menú */
+  color: white !important; /* Color del texto */
+}
+
+/* Flecha del select personalizada */
+.lang-selector::after {
+  /* content: "▼"; */
+  position: absolute;
+  right: 15px; /* Aumentamos espacio a la derecha */
+  top: 50%;
+  transform: translateY(-45%);
+  font-size: 0.6em;
+  color: #c95bf5;
+  pointer-events: none;
+  z-index: 2; /* Aseguramos que esté sobre el texto */
+}
+
+/* Efecto hover igual que otros items */
+.navbar-nav .nav-item .lang-selector:hover::after {
+  width: 100%;
+}
+
+/* Quitar outline en el select */
+.lang-dropdown:focus {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Quitar outline en el contenedor */
+.lang-selector:focus {
+  outline: none !important;
+}
+
+/* Opcional: Si usas Bootstrap, añade esto */
+.lang-selector:focus-within {
+  box-shadow: none !important;
+}
+
+/* Para navegadores específicos */
+.lang-dropdown:-moz-focusring {
+  color: transparent !important;
+  text-shadow: 0 0 0 #ffffff !important;
+}
+
+.lang-dropdown:-webkit-focus-ring-color {
+  outline: none !important;
+}
+
+/* Para navegadores WebKit (Chrome, Safari) */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  .lang-dropdown {
+    padding-right: 35px !important;
+  }
+  .lang-dropdown:focus {
+    background: transparent !important;
+  }
+  .lang-dropdown option {
+    background: #1b1a2e !important;
+    color: white !important;
+  }
+}
+
+/* Para Firefox */
+@-moz-document url-prefix() {
+  .lang-dropdown {
+    -moz-appearance: none !important;
+    text-indent: 0.01px !important;
+    text-overflow: '' !important;
+  }
+  .lang-dropdown option {
+    background: #1b1a2e !important;
+  }
+}
+
+/* Mantener consistencia en móvil */
+@media (max-width: 767px) {
+  .lang-selector {
+    padding: 0.7rem 1rem !important;
+  }
+  .lang-dropdown {
+    font-size: 1.4rem !important;
+  }
+}
+
+/* .navbar-nav .nav-item .lang-selector::after {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 5px;
+  width: 0;
+  border-radius: 16px;
+  background: #c95bf5;
+  bottom: 1px;
+  left: 0;
+  z-index: -1;
+  transition: all 0.3s ease-out 0s;
+}
+
+.navbar-nav .nav-item .lang-selector:hover::after {
+  width: 100%;
+} */
 
 /* --------- */
 /* Home section */

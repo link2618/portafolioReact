@@ -4,8 +4,9 @@ import { Navbar, Nav, Container } from "react-bootstrap";
 import { Link } from "react-router";
 import { CgFileDocument } from "react-icons/cg";
 import { AiOutlineHome, AiOutlineUser } from "react-icons/ai";
+import { MdOutlineLanguage } from "react-icons/md";
 
-import logo from "../Assets/logo.png";
+import logo from "../Assets/logo.svg";
 import { LANGUAGES } from '../constants/index';
 
 function NavBar() {
@@ -93,16 +94,20 @@ function NavBar() {
                         </Nav.Item>
 
                         <Nav.Item>
-                            <select
+                            <div className="nav-link lang-selector">
+                                <MdOutlineLanguage style={{ marginBottom: "2px" }} />
+                                <select
                                 defaultValue={i18n.language}
                                 onChange={onChangeLang}
-                            >
+                                className="lang-dropdown"
+                                >
                                 {LANGUAGES.map(({ code, label }) => (
                                     <option key={code} value={code}>
-                                        {label}
+                                    {label}
                                     </option>
                                 ))}
-                            </select>
+                                </select>
+                            </div>
                         </Nav.Item>
                     </Nav>
                 </Navbar.Collapse>
