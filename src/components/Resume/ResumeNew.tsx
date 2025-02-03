@@ -1,20 +1,29 @@
-import { useState, useEffect } from "react";
+// import { useState, useEffect } from "react";
 import { Container, Row } from "react-bootstrap";
 import { AiOutlineDownload } from "react-icons/ai";
-import { Document, Page, pdfjs } from "react-pdf";
 
 import Button from "react-bootstrap/Button";
 import Particle from "../Particle";
-import pdf from "../../assets/../assets/Hugo carvajalino.pdf";
-import "react-pdf/dist/esm/Page/AnnotationLayer.css";
-pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
+import pdf from "../../assets/../assets/Hugo_carvajalino.pdf";
 
 function ResumeNew() {
-    const [width, setWidth] = useState(1200);
+    // const [pdfDimensions, setPdfDimensions] = useState({
+    //     width: 793,
+    //     height: 1122,
+    // });
 
-    useEffect(() => {
-        setWidth(window.innerWidth);
-    }, []);
+    // const updateSize = () => {
+    //     const screenWidth = window.innerWidth;
+    //     setPdfDimensions({
+    //         width: screenWidth > 992 ? 793 : screenWidth - 30,
+    //         height: screenWidth > 992 ? 1122 : (screenWidth - 30) * 1.414,
+    //     });
+    // };
+
+    // useEffect(() => {
+    //     window.addEventListener("resize", updateSize);
+    //     return () => window.removeEventListener("resize", updateSize);
+    // }, []);
 
     return (
         <div>
@@ -33,12 +42,22 @@ function ResumeNew() {
                 </Row>
 
                 <Row className="resume">
-                    <Document
-                        file={pdf}
-                        className="d-flex justify-content-center"
-                    >
-                        <Page pageNumber={1} scale={width > 786 ? 1.7 : 0.6} />
-                    </Document>
+                    <div className="pdf-wrapper">
+                        <iframe
+                            src={`${pdf}#view=FitH`}
+                            className="responsive-pdf"
+                            title="PDF Viewer"
+                        />
+                    </div>
+                    {/* <iframe
+                        src={pdf}
+                        style={{
+                            width: `${pdfDimensions.width}px`,
+                            height: `${pdfDimensions.height}px`,
+                        }}
+                        className="responsive-pdf"
+                        title="PDF Viewer"
+                    /> */}
                 </Row>
 
                 <Row style={{ justifyContent: "center", position: "relative" }}>
