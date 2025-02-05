@@ -1,4 +1,5 @@
 import { Container, Row, Col } from "react-bootstrap";
+import { useTranslation } from "react-i18next";
 
 import laptopImg from "../../Assets/about.png";
 
@@ -8,6 +9,8 @@ import Aboutcard from "./AboutCard";
 import Toolstack from "./Toolstack";
 
 function About() {
+    const { t } = useTranslation();
+
     return (
         <Container fluid className="about-section">
             <Particle />
@@ -24,7 +27,7 @@ function About() {
                         <h1
                             style={{ fontSize: "2.1em", paddingBottom: "20px" }}
                         >
-                            Know Who <strong className="purple">I'M</strong>
+                            {t("about.title1")} <strong className="purple">{t("about.title1.1")}</strong>
                         </h1>
                         <Aboutcard />
                     </Col>
@@ -41,13 +44,13 @@ function About() {
                     </Col>
                 </Row>
                 <h1 className="project-heading">
-                    Professional <strong className="purple">Skillset </strong>
+                    {t("about.title2")} <strong className="purple">{t("about.title2.1")} </strong>
                 </h1>
 
                 <Techstack />
 
                 <h1 className="project-heading">
-                    <strong className="purple">Tools</strong> I use
+                    <strong className="purple">{t("about.title3")}</strong> {t("about.title3.1")}
                 </h1>
                 <Toolstack />
             </Container>
