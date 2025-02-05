@@ -1,0 +1,7 @@
+User-agent: *
+
+# Disallow URL Parameters
+
+Disallow: /*?*s={search_term}
+
+Sitemap:

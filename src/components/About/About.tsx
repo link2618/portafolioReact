@@ -1,7 +1,7 @@
 import { Container, Row, Col } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
 
-import laptopImg from "../../Assets/about.png";
+import laptopImg from "../../assets/about.png";
 
 import Particle from "../Particle";
 import Techstack from "./Techstack";

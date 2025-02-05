@@ -6,7 +6,7 @@ import { CgFileDocument } from "react-icons/cg";
 import { AiOutlineHome, AiOutlineUser } from "react-icons/ai";
 import { MdOutlineLanguage } from "react-icons/md";
 
-import logo from "../Assets/logo.svg";
+import logo from "../assets/logo.svg";
 import { LANGUAGES } from '../constants/index';
 
 function NavBar() {
