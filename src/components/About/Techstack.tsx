@@ -7,6 +7,7 @@ import {
     DiMongodb,
     DiPython,
     DiGit,
+    DiSass,
 } from "react-icons/di";
 import {
     SiNestjs,
@@ -15,6 +16,7 @@ import {
     SiServerless,
     SiAwslambda,
     SiDocker,
+    SiTailwindcss,
 } from "react-icons/si";
 import { TbBrandGolang, TbBrandNextjs } from "react-icons/tb";
 import { FaAws } from "react-icons/fa";
@@ -99,6 +101,16 @@ function Techstack() {
             <AboutTooltip title={t("about.docker")} id={t("about.docker")} >
                 <Col xs={4} md={2} className="tech-icons">
                     <SiDocker />
+                </Col>
+            </AboutTooltip>
+            <AboutTooltip title={t("about.sass")} id={t("about.sass")} >
+                <Col xs={4} md={2} className="tech-icons">
+                    <DiSass />
+                </Col>
+            </AboutTooltip>
+            <AboutTooltip title={t("about.tailwind")} id={t("about.tailwind")} >
+                <Col xs={4} md={2} className="tech-icons">
+                    <SiTailwindcss />
                 </Col>
             </AboutTooltip>
         </Row>

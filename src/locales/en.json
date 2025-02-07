@@ -65,6 +65,8 @@
     "about.serverless": "Serverless",
     "about.lambda": "AWS Lambda",
     "about.docker": "Docker",
+    "about.sass": "Sass",
+    "about.tailwind": "TailwindCss",
     "about.title3": "Tools",
     "about.title3.1": "I use",
     "about.toolWindows": "Windows",
