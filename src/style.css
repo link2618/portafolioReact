@@ -22,6 +22,10 @@ button:focus {
   box-shadow: none !important;
 }
 
+.main-content {
+  flex: 1 0 auto;
+}
+
 /* --------- */
 /*  Preloader */
 /* --------- */
@@ -548,6 +552,7 @@ button:focus {
   padding-top: 10px;
   padding-bottom: 8px;
   width: 100%;
+  flex-shrink: 0;
   /* position: absolute; */
   bottom: 0;
   left: 0;

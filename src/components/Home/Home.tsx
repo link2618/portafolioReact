@@ -10,7 +10,7 @@ function Home() {
     const { t } = useTranslation();
 
     return (
-        <section>
+        <section className="main-content">
             <Container fluid className="home-section" id="home">
                 <Particle />
                 <Container className="home-content">

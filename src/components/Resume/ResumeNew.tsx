@@ -25,7 +25,7 @@ function ResumeNew() {
     // }, []);
 
     return (
-        <div>
+        <section className="main-content">
             <Container fluid className="resume-section">
                 <Particle />
                 <Row className="resume">
@@ -49,7 +49,7 @@ function ResumeNew() {
 
                 <ButtonDownload pdf={pdf} />
             </Container>
-        </div>
+        </section>
     );
 }
 
